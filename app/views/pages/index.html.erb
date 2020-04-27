@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col s12">
+    <div class="card home-container">
+      <div class="card-content center white-text home-page-card-contents padding-top-15-percent">
+        <h2> Welcome to the University App</h2><br>
+        <% if !student_signed_in? %>
+          <%= link_to "Sign Up!", new_student_registration_path,
+                                class: "waves-effect waves-light btn-large" %>
+        <% else %>
+          <%= link_to "View Courses", courses_path,
+                                class: "waves-effect waves-light btn-large" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<% if obj.errors.any? %>
+  <div class="col s12">
+    <h4><%= pluralize(obj.errors.count, "error") %> prohibited this course from being saved:</h4>
+    <div class="card horizontal red lighten-2">
+      <div class="card-stacked">
+        <div class="card-content">
+          <ol>
+            <% obj.errors.full_messages.each do |key, message| %>
+              <li><%= key %> <%= message %></li>
+            <% end %>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %> 

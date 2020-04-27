@@ -1,0 +1,28 @@
+<div class="row">
+  <%= form_with(model: course, local: true) do |form| %>
+    <%= render 'layouts/form_errors', {obj: course} %>
+    <div class="row">
+      <div class="input-field col s6">
+
+        <%= form.label :short_name %>
+        <%= form.text_field :short_name, class:"validate" %>
+        
+      </div>
+      <div class="input-field col s6">
+        <%= form.label :name %>
+        <%= form.text_field :name, class: "validate" %>
+        
+      </div>
+      <div class="input-field col s12">
+        <%= form.label :description %>
+        <%= form.text_area :description, class: "materialize-textarea" %>
+        
+      </div>
+    </div>
+    <div class="actions">
+      <%= button_tag( :class => "btn waves-effect waves-light") do %>
+        Submit<i class="material-icons right">send</i>
+      <% end %>      
+    </div>
+  <% end %>
+</div>
